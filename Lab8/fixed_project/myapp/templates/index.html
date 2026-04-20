@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}<title>หน้าแรก | Pattarapon Polboon</title>{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="p-5 mb-4 bg-dark text-white rounded-3 text-center">
+    <h1 class="display-4 fw-bold">🐧 Penguin Gallery</h1>
+    <p class="lead">ยินดีต้อนรับสู่เว็บไซต์ของ Pattarapon Polboon</p>
+    <p class="text-white-50">รายวิชา ICT12367 การใช้กรอบงานสำหรับการพัฒนาเว็บแอปพลิเคชันเพื่อความมั่นคงปลอดภัย</p>
+    <a href="{% url 'about' %}" class="btn btn-outline-light btn-lg mt-2">ดูแกลเลอรี่</a>
+</div>
+
+<!-- Info Cards -->
+<div class="row mb-4">
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+            <img src="{% static 'img/penguin1.webp' %}" class="card-img-top" style="height:200px; object-fit:cover;" alt="Penguin">
+            <div class="card-body">
+                <h5 class="card-title">สินค้า</h5>
+                <p class="card-text text-muted">รวบรวมภาพเพนกวินสุดน่ารักจากทั่วทุกมุมโลก พร้อมข้อมูลที่น่าสนใจ</p>
+                <a href="{% url 'about' %}" class="btn btn-primary btn-sm">ดูเพิ่มเติม</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+            <img src="{% static 'img/penguin4.jpg' %}" class="card-img-top" style="height:200px; object-fit:cover;" alt="Penguin">
+            <div class="card-body">
+                <h5 class="card-title">บริการ</h5>
+                <p class="card-text text-muted">ลงทะเบียนสมาชิกเพื่อรับข้อมูลและข่าวสารล่าสุดเกี่ยวกับเพนกวิน</p>
+                <a href="{% url 'form' %}" class="btn btn-primary btn-sm">ลงทะเบียน</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+            <img src="{% static 'img/penguin7.webp' %}" class="card-img-top" style="height:200px; object-fit:cover;" alt="Penguin">
+            <div class="card-body">
+                <h5 class="card-title">เกี่ยวกับเรา</h5>
+                <p class="card-text text-muted">เรียนรู้เพิ่มเติมเกี่ยวกับโปรเจกต์นี้และผู้พัฒนา Pattarapon Polboon</p>
+                <a href="{% url 'about' %}" class="btn btn-primary btn-sm">อ่านเพิ่มเติม</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
